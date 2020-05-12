@@ -1,0 +1,23 @@
+[package]
+name = "practice"
+version = "0.1.0"
+authors = ["komalklr <komalklr@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+curve25519-dalek = { version = "2", features = ["serde"] }
+merlin = "2"
+rand = { version = "0.7", default-features = false, features =["std"] }
+csv = "1.1"
+rustc-serialize = "*"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+hex = "0.4"
+
+[dependencies.bulletproofs]
+#path = "../bulletproofs"
+git = "https://github.com/komalklr/bulletproofs"
+branch = "main"
+features = ["yoloproofs"]
